@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>es.unican.ps</groupId>
+		<artifactId>ucpark-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>ucpark-selenium</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+		    <version>3.141.59</version>
+			<!-- <version>2.35.0</version>-->
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+
+	<!-- <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.0</version>
+				<configuration>
+					<verbose>true</verbose>
+					<fork>true</fork>
+					<executable>C:/Program Files/Java/jdk1.8.0_73/bin/javac</executable>
+					<source>1.8</source>
+					<target>1.8</target>
+					<testSource>1.8</testSource>
+					<testTarget>1.8</testTarget>
+				</configuration>
+			</plugin>
+</plugins>
+</build> -->
+
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-failsafe-plugin</artifactId> 
+				<configuration> Este valor es necesario para que ejecute de manera correcta 
+				varios test seguidos <forkMode>perTest</forkMode> <jvm>C:/Program Files/Java/jdk1.8.0_73/bin/java</jvm> 
+				</configuration> <version>2.19.1</version> <executions> <execution> <goals> 
+				<goal>integration-test</goal> <goal>verify</goal> </goals> </execution> </executions> 
+				</plugin> ESte plugin es para lanzar un contenedor antes de las pruebas y 
+				pararlo después Aquí lo configuro para que se lance en pre-integration-test 
+				y se pare en post-integration-test Hay que configurar debajo qué tipo de 
+				contenedor queremos y de donde se puede descargar, no hace falta que esté 
+				instalado, de ese modo puede funcionar en entornos de integración continua 
+				Dice algo así como que para que se añadan más al container hay que dec lararlo 
+				como dependencias del modulo y del container https://codehaus-cargo.github.io/cargo/Starting+and+stopping+a+container.html 
+				<plugin> <groupId>org.codehaus.cargo</groupId> <artifactId>cargo-maven2-plugin</artifactId> 
+				<executions> <execution> <id>start-container</id> <phase>pre-integration-test</phase> 
+				<goals> <goal>start</goal> </goals> </execution> <execution> <id>stop-container</id> 
+				<phase>post-integration-test</phase> <goals> <goal>stop</goal> </goals> </execution> 
+				</executions> <configuration> [Cargo plugin configuration goes in here] <container> 
+				<containerId>tomcat7x</containerId> <zipUrlInstaller> <url>http://a-inet01:8100/apache-tomcat-7.0.25.zip</url> 
+				</zipUrlInstaller> </container> <configuration> <properties> <cargo.servlet.port>1718</cargo.servlet.port> 
+				</properties> </configuration> </plugin> </plugins> </build> -->
+</project>
