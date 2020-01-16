@@ -1,11 +1,12 @@
 package es.unican.ps.ucpark.negocio;
 
 import javax.ejb.EJB;
+import javax.ejb.Stateless;
 
 import dao.IDenunciasDAO;
 import dominio.Denuncia;
 import gestion.IGestionDenuncias;
-
+@Stateless
 public class GestionDenuncias implements IGestionDenuncias {
 	
 	@EJB

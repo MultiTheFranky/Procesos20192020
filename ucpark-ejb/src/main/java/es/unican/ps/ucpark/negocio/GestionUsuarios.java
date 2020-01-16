@@ -1,13 +1,14 @@
 package es.unican.ps.ucpark.negocio;
 
 import javax.ejb.EJB;
+import javax.ejb.Stateless;
 
 import dao.IUsuariosDAO;
 import dominio.Usuario;
 import dominio.Vehiculo;
 import gestion.IGestionUsuario;
 import gestion.IRegistrar;
-
+@Stateless
 public class GestionUsuarios implements IGestionUsuario, IRegistrar {
 	
 	@EJB

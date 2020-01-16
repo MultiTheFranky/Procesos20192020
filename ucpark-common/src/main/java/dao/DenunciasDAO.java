@@ -2,6 +2,7 @@ package dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import dominio.Denuncia;
 
@@ -11,13 +12,18 @@ public class DenunciasDAO implements IDenunciasDAO {
 	private EntityManager em;
 
 	public Denuncia crearDenuncia(Denuncia denuncia) {
-		// TODO Auto-generated method stub
-		return null;
+		em.merge(denuncia);
+		return denuncia;
+	}
+	
+	public Denuncia denuncia(Long id) {
+		Query q = em.createQuery("SELECT d FROM Denuncia d WHERE d.id = :idDenuncia");
+		q.setParameter("idDenuncia", id);
+		return (Denuncia)q.getSingleResult();
 	}
 
 	public Denuncia eliminarDenuncia(Denuncia denuncia) {
-		// TODO Auto-generated method stub
-		return null;
+		em.remove(denuncia);
+		return denuncia;
 	}
-	
 }

@@ -1,12 +1,13 @@
 package es.unican.ps.ucpark.negocio;
 
 import javax.ejb.EJB;
+import javax.ejb.Stateless;
 
 import dao.IEstacionamientoDAO;
 import dominio.Estacionamiento;
 import dominio.Vehiculo;
 import gestion.IGestionEstacionamiento;
-
+@Stateless
 public class GestionEstacionamientos implements IGestionEstacionamiento {
 	
 	@EJB
