@@ -10,6 +10,11 @@ import org.junit.Test;
 import dao.IUsuariosDAO;
 import dominio.Usuario;
 
+/**
+ * 
+ * @author Francisco Alamao Garcia y Alvaro Lamadrid Agudo
+ *
+ */
 public class IUsuariosDAOTest {
 
 	IUsuariosDAO uDAO;
@@ -27,6 +32,7 @@ public class IUsuariosDAOTest {
 	
 	@Test
 	public void crearUsuarioTest() {
+		// nuevo usuario (no hay duplicado)
 		try {
 			assertEquals(uDAO.crearUsuario(u1),u1);
 		} catch(Exception e) {
