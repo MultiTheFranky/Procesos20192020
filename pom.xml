@@ -15,9 +15,6 @@
 		<module>ucpark-common</module>
 		<module>ucpark-ejb</module>
 		<module>ucpark-ear</module>
-		<module>ucpark-war</module>
-		<module>ucpark-funciones</module>
-		<module>ucpark-selenium</module>
 	</modules>
 
 	<dependencies>

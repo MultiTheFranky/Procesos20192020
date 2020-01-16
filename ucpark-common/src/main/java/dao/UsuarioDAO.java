@@ -36,11 +36,13 @@ public class UsuarioDAO implements IUsuariosDAO {
 		List<Vehiculo> lista = usuario.getVehiculos();
 		lista.add(vehiculo);
 		usuario.setVehiculos(lista);
+		vehiculo.setPropietario(usuario);
 		return true;
 	}
 
 	public boolean desasignarVehiculo(Vehiculo vehiculo, Usuario usuario) {
-		// TODO Auto-generated method stub
-		return false;
+		usuario.getVehiculos().remove(vehiculo);
+		vehiculo.setPropietario(null);
+		return true;
 	}
 }
