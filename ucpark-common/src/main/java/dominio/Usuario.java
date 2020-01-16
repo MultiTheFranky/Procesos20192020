@@ -15,6 +15,8 @@ public class Usuario {
 		vehiculos = new ArrayList<Vehiculo>();
 	}
 
+	public Usuario() {}
+
 	public String getEmail() {
 		return email;
 	}

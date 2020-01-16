@@ -17,8 +17,11 @@ public class UsuarioDAO implements IUsuariosDAO {
 	private EntityManager em;
 
 	public Usuario crearUsuario(Usuario usuario) {
-		em.persist(usuario);
-		return usuario;
+		if(usuario(usuario.getEmail()) == null) { // comprobamos si ya existe un usuario
+			em.persist(usuario);
+			return usuario;
+		}
+		return null;
 	}
 
 	public Usuario usuario(String email) {

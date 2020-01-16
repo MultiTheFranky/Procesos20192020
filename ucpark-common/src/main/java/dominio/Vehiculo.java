@@ -19,6 +19,7 @@ public class Vehiculo {
 		estacionamientoEnVigor = null;
 		denunciasEnVigor = new ArrayList<Denuncia>();
 	}
+	public Vehiculo() {	}
 	public String getMatricula() {
 		return matricula;
 	}
